@@ -1,0 +1,167 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	font-size: 100%;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	    min-height: 747px;
+	background-attachment:fixed;
+}
+
+
+.book-appointment {
+    background:rgba(1, 38, 64, 0.68);
+    padding: 50px 30px;
+
+}
+
+.book-appointment h2 {
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 1.5em;
+    font-weight: 500;
+    letter-spacing: 4px;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+.book-appointment input[type="text"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"] {
+    width: 85%;
+    color: #fff;
+    outline: none;
+    font-size: 0.9em;
+    line-height: 25px;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 2px solid #0b6fb2;
+    -webkit-appearance: none;
+    margin: .3em 0em 1em;
+    font-family: 'Roboto', sans-serif;
+    background: rgba(127, 178, 212, 0.31);
+}
+textarea {
+	resize:none;
+	height:90px;
+	align-self: center;
+	
+}
+.textalign{
+align-self: center;
+margin-left: 400px;
+
+
+}
+
+.book-appointment select.form-control {
+    outline: none;
+    font-size: 0.9em;
+    padding: 7px 10px;
+    width: 89.5%;
+	margin: 5px 0px 16px;
+    border-radius: 0;
+   background: rgba(127, 178, 212, 0.31);
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #0b6fb2;
+    font-family: 'Roboto', sans-serif;
+}
+
+.book-appointment select.form-control option {
+    background:#111;
+  }
+
+input[type=submit] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 9px 30px;
+    font-size: 1.04em;
+    cursor: pointer;
+    outline: none;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+}
+input[type=submit]:hover {
+    background: #023e99;
+    border-color: #023e99;
+    color: #fefefe;
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+}
+.arrows-reserve{
+	    position:relative;
+		color:#EFA52C;
+	    position:relative;
+		color:#EFA52C;
+		font-size:2em;
+}
+.arrows-reserve:before{
+    content: '';
+    position: absolute;
+    bottom: 43%;
+    left: 35.5%;
+    background: #fff;
+    width: 11%;
+    height: 3px;
+}
+.arrows-reserve:after{
+     content: '';
+    position: absolute;
+  bottom: 43%;
+    right: 35.5%;
+    background: #fff;
+        width: 11%;
+    height: 3px;
+
+		font-size:2em;
+}
+.arrows-reserve:before{
+    content: '';
+    position: absolute;
+    bottom: 43%;
+    left: 35.5%;
+    background: #fff;
+    width: 11%;
+    height: 3px;
+}
+.arrows-reserve:after{
+     content: '';
+    position: absolute;
+  bottom: 43%;
+    right: 35.5%;
+    background: #fff;
+        width: 11%;
+    height: 3px;
+}
+
+.left-agileits{
+    width: 49%;
+    float: left;
+}
+.right-agileinfo {
+    width: 49%;
+    float: left;
+}
+
+.book-appointment p {
+    color: #d6eefe;
+    font-size: 17px;
+    letter-spacing: .5px;
+	text-transform:capitalize;
+}
+.same {
+    padding: 0px 4px;
+}
+.gaps {
+    padding-left: 3em;
+}
