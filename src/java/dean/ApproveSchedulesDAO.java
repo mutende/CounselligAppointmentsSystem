@@ -16,13 +16,13 @@ import login.ConnectionManager;
  * @author Alex
  */
 public class ApproveSchedulesDAO {
-    public static ArrayList<ApproveSchedulesBean> getAllSchedules() {
+    public static ArrayList<ApproveSchedulesBean> getAllSchedules(){
       
         ArrayList<ApproveSchedulesBean> list2 = new ArrayList<ApproveSchedulesBean>();
 
         try {
             Connection con = ConnectionManager.getConnect();
-            PreparedStatement ps = con.prepareStatement("select * from scheduling");
+            PreparedStatement ps = con.prepareStatement("select * from scheduling order by dateAway DESC limit 0,5");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 

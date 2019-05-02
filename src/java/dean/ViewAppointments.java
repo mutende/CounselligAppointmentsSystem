@@ -34,18 +34,11 @@ public class ViewAppointments extends HttpServlet {
         ArrayList<AppointmentsBean> details =  AppointmentsDAO.getAllAppoints();
         
       request.setAttribute("appointments", details);
-                        System.out.println("obtained records "+details);
+                       // System.out.println("obtained records "+details);
        request.getRequestDispatcher("dean/viewsessions.jsp").forward(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

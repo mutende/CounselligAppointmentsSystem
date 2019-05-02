@@ -6,11 +6,11 @@
 package login;
 
 import java.sql.*;
-import java.util.*;
 
 public class ConnectionManager {
     
     static Connection con;
+    
    
     
     public static Connection getConnect() throws ClassNotFoundException, SQLException {
@@ -21,20 +21,23 @@ public class ConnectionManager {
         
         String  url = "jdbc:mysql://localhost:3306/codebloode";
         
+        //String url = "jdbc:mysql://remotemysql.com:3306/kPvBudAgBb";
+        
         try{
 
 
 
-           //con = DriverManager.getConnection(url, "root", "@elvis");
+          // con = DriverManager.getConnection(url, "kPvBudAgBb", "Q4lI6itgDh");
 
 
 
 
-            con = DriverManager.getConnection(url, "root", "@elvis$");
+            con = DriverManager.getConnection(url, "mutende", "m0910");
             
         }
-        catch(Exception ex){
-            ex.printStackTrace();
+        catch(SQLException ex){
+            String message = ex.getMessage();
+            System.out.println(message);
         }
         
         return con;

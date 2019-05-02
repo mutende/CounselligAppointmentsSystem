@@ -27,17 +27,25 @@ public class addDatedao {
     public static ArrayList<addDateBean> listofCounsellors(String appDate, String appTime){
         System.out.println("DAO RUNNING.....");
         ArrayList<addDateBean> counselors = new ArrayList();
-//        addDateBean getdttm = new addDateBean();
-//        String appDate = getdttm.getDt();
-//        String appTime = getdttm.getTm();
+
         
         System.out.println(" Time from servlet "+appTime);
         System.out.println("Date from servlet "+ appDate);
         //add 45min to time
         SimpleDateFormat tmformat = new SimpleDateFormat("HH:mm:ss");
         Date time = null;
+       
+
              try {
                 time = tmformat.parse(appTime);
+                Date before = tmformat.parse("8:30:00");
+                Date after = tmformat.parse("16:15");
+                if(time.after(after) || time.before(before)){
+                    
+                }else{
+                    
+                    
+                }
                
             } catch (ParseException e) {
                 e.printStackTrace();

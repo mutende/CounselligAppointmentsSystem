@@ -32,7 +32,7 @@ public class ViewAllCounsellors extends HttpServlet {
         ArrayList<DeanManageCounsellorBean> data =  DeanManageCounsellorDAO.getAllRecords();
         
       request.setAttribute("counsellors", data);
-                        System.out.println("obtained records "+data);
+                        //System.out.println("obtained records "+data);
        request.getRequestDispatcher("dean/viewCounsellors.jsp").forward(request, response);
     }
 

@@ -140,16 +140,10 @@ body {
             <li class="nav-item">
                 <a class="nav-link active" href="printawaycounsellors.jsp">Print Unavailable Counsellors</a>
             </li>
-            <!--
-            <li class="nav-item">
-                <a class="nav-link" href="viewsessions.jsp"> View Appointments</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="approveschedules.jsp">Approve Counsellor Schedules</a>
-            </li>>-->
+          
             
             <li class="nav-item">
-                <a  class="nav-link" href="../logout.jsp"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
+                <a  class="nav-link" href="logout"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
             </li>  </ul>
       
     </nav>

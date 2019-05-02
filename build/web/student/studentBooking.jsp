@@ -69,10 +69,26 @@
       <% String messages = request.getAttribute("messages").toString();
             if(messages.equals(null)){
                 messages = "";
+            }else{
+                
+                %>
+                <br><br>              
+ <div class="container ml-auto mr-auto">
+      
+          <div class="alert alert-warning alert-dismissable text-center" role="alert">
+            <button class="close" data-dismiss="alert">
+              <small><sup>x</sup></small>
+            </button>
+           <%=messages%>
+          </div>
+    
+
+</div>
+                <%
             }
         %>
        <div class="container col-md-4 offset-4">
-           <div class="text-danger text-center"><p><%=messages%></p></div>
+           
         <form action="AddDate" class="border border-light p-5" Method="post" name="form">
                 
                 <p class="h4 mb-4 text-center">Select Date and Time to Proceed</p>

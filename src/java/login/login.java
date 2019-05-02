@@ -21,7 +21,7 @@ import javax.servlet.http.HttpSession;
  */
 public class login extends HttpServlet {
 
-    String messages = "";
+    String messages = "Hello Welcome to Counselling Appointment Booking System";
      @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

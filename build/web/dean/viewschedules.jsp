@@ -14,20 +14,15 @@
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         
         <title>Approve Schedules</title>
-    
-             <!-- MDB core JavaScript -->
-              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/mdb.min.css">
-<link rel="stylesheet" type="text/css" href="cdn/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="cdn/jquery-3.3.1.js">
-<link rel="stylesheet" type="text/css" href="cdn/jszip.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/mdb.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/pdfmake.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/vfs_fonts.js">
- <link  rel="stylesheet" href="../css/stylelogin.css" type="text/css" media="all"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="cdn/mdb/css/bootstrap.min.css" type="text/css">
+        <!-- Material Design Bootstrap - type=""-->
+        <link href="cdn/mdb/css/mdb.min.css" type="text/css" rel="stylesheet">
+        <!-- datepicker -->
+        <link rel="stylesheet" href="cdn/datepicker/jquery-ui.css">
 
-            <!-- Material Design Bootstrap -->
-    <!--<link href="../bootstrap1/bootstrapcss/mdb.min.css" rel="stylesheet">-->
+    
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -88,18 +83,6 @@ body {
 }
 </style>
 
-
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#from" ).datepicker();
-  } );
-  </script>
-
-   <!-- Font Awesome -->
-  
-
 </head>
  <body style="background-color: whitesmoke">
         <div class="sidenav">
@@ -109,8 +92,6 @@ body {
   <a href="ViewAllCounsellors"><i class="fas fa-eye" style='font-size:18px'></i> View Counsellors</a>
   <a href="CounsellorSignup"><i class="fas fa-user-plus" style='font-size:18px'></i> Add Counsellor</a>
   <a href="ApproveSchedules"><i class='far fa-edit' style='font-size:18px'></i> Approve Schedules</a>
-  <a href="#"><i class="fas fa-address-book" style='font-size:18px'></i> Contact Us</a>
-  <a href="#"><i <i class="fas fa-users" style='font-size:18px'></i> About Us</a>
   <div class="change">
   <a href="dean/changepassword.jsp" style=" font-style: italic"><i class="fas fa-key" style='font-size:18px'></i> Change Your Password ?</a>
   </div>
@@ -135,31 +116,68 @@ body {
             </li>>-->
             
             <li class="nav-item">
-                <a  class="nav-link" href="logout.jsp" style="color: white"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
+                <a  class="nav-link" href="logout" style="color: white"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
             </li>  </ul>
       
     </nav>
     </div>
-     <h4 style="margin-left:500px; margin-top: 100px">
-    Approve Schedules 
-</h4>
-<div style="margin-left:500px; margin-top: 50px">
-    <form action="#" method="get">
-      Filter By:  <input type="text" id= "from" name="from" placeholder="From" autocomplete="off" maxlength="10">
-        
-        <input type="text" name="to" placeholder="To" id="to" autocomplete="off" maxlength="10">
-    <script type="text/javascript">
+     <br><br>
+     <div class="row">
+     <div class="container col-md-6 offset-3">
+       <h4 class="h4 text-center mb-2 mt-5">
+           Approve Schedules 
+       </h4>
+         </div>
+     </div>
+     
+     <div class="row">
+         <div class="container col-md-6 offset-3">
+                            <!-- Default form grid -->
+               <form method="GET" action="FilterSchedule">
+                 <!-- Grid row -->
+                 <div class="row">
+                   <!-- Grid column -->
+                   <div class="col mt-2">
+                     <!-- Default input -->
+                     <input type="text" class="form-control" id="from" placeholder="date from" name="from" readonly required>
+                   </div>
+                   <!-- Grid column -->
 
-    </script>
-        <button type="submit" name="get"><span>Search <img src="images/search.png" title="" alt="" height="17" width="17" /></span></button>
-    </form>
+                   <!-- Grid column -->
+                   <div class="col mt-2">
+                     <!-- Default input -->
+                     <input type="text" class="form-control" id="to" placeholder="date to" name="to" readonly required>
+                   </div>
+                   <div class="col">
+                        <button type="submit" name="get" class="btn btn-primary"><span>Search <img src="images/search.png" title="" alt="" height="17" width="17" /></span></button>
+                   </div>
+                   <!-- Grid column -->
+                 </div>
+                 <!-- Grid row -->
+               </form>
+               <!-- Default form grid -->
+                        </div>
+         
+     </div>
+
+
+ <div class="container ml-auto mr-auto">
+      
+          <div class="alert alert-warning alert-dismissable text-center" role="alert">
+            <button class="close" data-dismiss="alert">
+              <small><sup>x</sup></small>
+            </button>
+            The record shows the latest 5 ordered by date away, but you can filter any period
+          </div>
+    
+
 </div>
      
     
      <div>
      <div style="margin-left:300px; margin-top: 18px; margin-right: 30px">
-         <table border="1" width="80%" style="text-decoration: none" class="table table-bordered">
-             <tr><th>Id</th><th>Counsellor No.</th><th>Date Away</th><th>Time Away</th><th>Date Back</th><th>Time Back</th><th>Reason</th><th>Approved</th><th>Approve</th></tr>
+         <table border="1" style="text-decoration: none" class="table table-bordered">
+             <tr><th>Id</th><th>Counsellor No.</th><th>Date Away</th><th>Time Away</th><th>Date Back</th><th>Time Back</th><th>Reason</th><th> Approve Status</th><th>Yes/No</th></tr>
                     <c:forEach items="${schedules}" var="b">
                 <tr>
                     <td>${b.schId}</td>
@@ -169,16 +187,50 @@ body {
                     <td>${b.dtback}</td>
                     <td>${b.taway}</td>
                     <td>${b.reason}</td>
+                    
                     <td>${b.approve}</td>
+                    
               
-                   <td><a href="dean/approveschedule.jsp?id=${b.schId}" style="color: green">
-                           Approve <i class="fas fa-check-circle"></i></a></td></tr>
+                   <td><a href="approveschedule?id=${b.schId}&approve=${b.approve}" style="color: green">
+                           Confirm <i class="fas fa-check-circle"></i></a></td></tr>
             </c:forEach>
         </table>
      </div>
       </div>
 <div class="footer fixed-bottom" style="color: #ffffff; background-color: #808080">
-       <jsp:include page="../includes/footer.jsp"/>
+     <%@ page import="java.util.*" %>
+
+<footer class="text-center footer-copyright py-3 navbar-dark white-text" style="background-color: #808080">
+    <% GregorianCalendar currentDate = new GregorianCalendar();
+    int year = currentDate.get(Calendar.YEAR);
+    %>
+        &copy;Copyright <%= year %> <i>CodeBloode Sons Systems. </i>&checkmark;
+</footer>
+
+ <script type="text/javascript" src="cdn/jquery-3.4.0.min.js"></script>
+ <script type="text/javascript" src="cdn/jquery-ui.js"></script>
+ <script type="text/javascript" src="cdn/popper.min.js"></script>
+  <script type="text/javascript" src="cdn/mdb.min.js"></script>
+ <script type="text/javascript" src="cdn/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="cdn/jszip.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/pdfmake.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/vfs_fonts.js">
+
+
+       
     </div>
+       
+                 <script>
+                    $(function() {
+                       $( "#from" ).datepicker({dateFormat: 'yy-mm-dd'});
+
+                     });
+                </script>
+                 <script>
+                    $(function() {
+                       $( "#to" ).datepicker({dateFormat: 'yy-mm-dd'});
+
+                     });
+                </script>
     </body>
 </html>

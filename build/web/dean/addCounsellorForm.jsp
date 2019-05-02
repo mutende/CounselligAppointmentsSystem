@@ -109,12 +109,10 @@ body {
         <div class="sidenav">
    <div class="sidenav1">
   <a href="dean/"><i class="fa fa-home" style='font-size:18px'></i> Home</a>
-  <a href="dean/viewsessions.jsp"><i class="fas fa-eye" style='font-size:18px'></i> View Appointments</a>
-  <a href="ViewAllCounsellors"><i class="fas fa-eye" style='font-size:18px'></i> View Counsellors</a>
-  <a href="CounsellorSignup"><i class="fas fa-user-plus" style='font-size:18px'></i> Add Counsellor</a>
+  <a href="ViewAppointments"><i class="fas fa-eye" style='font-size:18px'></i> View Appointments</a>
+  <a href="ViewAllCounsellors"><i class="fas fa-eye" style='font-size:18px'></i> View Counselors</a>
+  <a href="CounsellorSignup"><i class="fas fa-user-plus" style='font-size:18px'></i> Add Counselor</a>
   <a href="ApproveSchedules"><i class='far fa-edit' style='font-size:18px'></i> Approve Schedules</a>
-  <a href="#"><i class="fas fa-address-book" style='font-size:18px'></i> Contact Us</a>
-  <a href="#"><i <i class="fas fa-users" style='font-size:18px'></i> About Us</a>
   <div class="change">
   <a href="dean/changepassword.jsp" style=" font-style: italic"><i class="fas fa-key" style='font-size:18px'></i> Change Your Password ?</a>
   </div>
@@ -130,16 +128,10 @@ body {
             <li class="nav-item">
                 <a class="nav-link active" href="ViewAllCounsellors" style="color: white">View Counsellors</a>
             </li>
-            <!--
-            <li class="nav-item">
-                <a class="nav-link" href="viewsessions.jsp"> View Appointments</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="approveschedules.jsp">Approve Counsellor Schedules</a>
-            </li>>-->
+           
             
             <li class="nav-item">
-                <a  class="nav-link" href="logout.jsp" style="color: white"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
+                <a  class="nav-link" href="logout" style="color: white"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
             </li>  </ul>
       
     </nav>

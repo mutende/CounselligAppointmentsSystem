@@ -151,7 +151,7 @@ body {
             </li>
             -->
             <li class="nav-item">
-                <a  class="nav-link" href="../logout.jsp"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
+                <a  class="nav-link" href="logout"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
             </li>  </ul>
       
     </nav>

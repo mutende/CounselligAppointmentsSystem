@@ -127,8 +127,6 @@ body {
   <a href="../ViewAllCounsellors"><i class="fas fa-eye" style='font-size:18px'></i> View Counsellors</a>
   <a href="../CounsellorSignup"><i class="fas fa-user-plus" style='font-size:18px'></i> Add Counsellor</a>
   <a href="../ApproveSchedules"><i class='far fa-edit' style='font-size:18px'></i> Approve Schedules</a>
-  <a href="#"><i class="fas fa-address-book" style='font-size:18px'></i> Contact Us</a>
-  <a href="#"><i <i class="fas fa-users" style='font-size:18px'></i> About Us</a>
   <div class="change">
   <a href="changepassword.jsp" style=" font-style: italic"><i class="fas fa-key" style='font-size:18px'></i> Change Your Password ?</a>
   </div>
@@ -152,7 +150,7 @@ body {
                 <p style="color: white; margin-right: 400px"> Egerton University Appointment Booking Systems.</p> 
             </li
             <li class="nav-item">
-                <a  class="nav-link" href="../logout.jsp"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
+                <a  class="nav-link" href="../logout"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
             </li>
         </ul>
     </nav>

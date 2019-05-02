@@ -73,12 +73,25 @@
          <% String messages = request.getAttribute("messages").toString();
             if(messages.equals(null)){
                 messages = "";
+            }else{
+                %>
+                
+                <div class="container ml-auto mr-auto">
+      
+          <div class="alert alert-warning alert-dismissable text-center" role="alert">
+            <button class="close" data-dismiss="alert">
+              <small><sup>x</sup></small>
+            </button>
+           <%=messages%>
+          </div>
+                <%
+                     messages = "";
             }
         %>
       
         <div class="container mt-5 ml-auto mr-auto col-md-4 offset-4" id="login">
-            <div class="text-danger text-center"><p><%=messages%></p></div>
-            <% messages = "";%>
+           
+           
             <form action="login" class="border border-light p-5" Method="POST" name="form">
                 
                 <p class="h4 mb-4 text-center">Login</p>
@@ -143,17 +156,15 @@
             </script>
         </div>
 
-       
+               
          
-         <jsp:include page="includes/footer.jsp" />
+         
             
         </div>
-<!--     Optional JavaScript 
-     jQuery first, then Popper.js, then Bootstrap JS 
-    <script src="bootstrap/js/jquery-3.3.1.min.js"></script>
-    <script src="bootstrap/js/popper.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>-->
-        
+
+        <div>
+           <jsp:include page="includes/footer.jsp" /> 
+        </div>     
     </body>
 </html>
 

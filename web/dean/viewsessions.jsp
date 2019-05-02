@@ -18,13 +18,12 @@
         <title>View Appointments</title>
 
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/mdb.min.css">
-<link rel="stylesheet" type="text/css" href="cdn/bootstrap.min.css">
-<!--<link rel="stylesheet" type="text/javascript" href="cdn/jquery-3.3.1.js">-->
-<link rel="stylesheet" type="text/javascript" href="cdn/jszip.min.js">
-<link rel="stylesheet" type="text/javascript" href="cdn/mdb.min.js">
-<link rel="stylesheet" type="text/javascript" href="cdn/pdfmake.min.js">
-<link rel="stylesheet" type="text/javascript" href="cdn/vfs_fonts.js">
+ <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="cdn/mdb/css/bootstrap.min.css" type="text/css">
+        <!-- Material Design Bootstrap - type=""-->
+        <link href="cdn/mdb/css/mdb.min.css" type="text/css" rel="stylesheet">
+        <!-- datepicker -->
+        <link rel="stylesheet" href="cdn/datepicker/jquery-ui.css">
  <link  rel="stylesheet" href="../css/stylelogin.css" type="text/css" media="all"> 
 
             <!-- Material Design Bootstrap -->
@@ -88,16 +87,7 @@ body {
   .sidenav a {font-size: 18px;}
 }
 </style>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#from" ).datepicker();
-  } );
-  </script>
-        
-   <!-- Font Awesome -->
-  
+
 
 </head>
  <body style="background-color: whitesmoke">
@@ -108,8 +98,6 @@ body {
   <a href="ViewAllCounsellors"><i class="fas fa-eye" style='font-size:18px'></i> View Counsellors</a>
   <a href="CounsellorSignup"><i class="fas fa-user-plus" style='font-size:18px'></i> Add Counsellor</a>
   <a href="ApproveSchedules"><i class='far fa-edit' style='font-size:18px'></i> Approve Schedules</a>
-  <a href="#"><i class="fas fa-address-book" style='font-size:18px'></i> Contact Us</a>
-  <a href="#"><i <i class="fas fa-users" style='font-size:18px'></i> About Us</a>
   <div class="change">
   <a href="dean/changepassword.jsp" style=" font-style: italic"><i class="fas fa-key" style='font-size:18px'></i> Change Your Password ?</a>
   </div>
@@ -134,37 +122,65 @@ body {
             </li>>-->
             
             <li class="nav-item">
-                <a  class="nav-link" href="logout.jsp" style="color: white"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
+                <a  class="nav-link" href="logout " style="color: white"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
             </li>  </ul>
       
     </nav>
     </div>
 
 
-
+<br><br>
         <div class="flex-center flex-column" >
-<!-- <div class="container" style="margin-top: 120px "> -->
+            
+     <div class="row">
+     <div class="container col-md-10 offset-3">
+       <h4 class="h4 text-center mb-2 mt-5">
+            Booked Appointments are:
+       </h4>
+         </div>
+     </div>
+     
+     <div class="row">
+         <div class="container col-md-10 offset-3">
+                            <!-- Default form grid -->
+             <form metho="GET" action="FilterAppointments">
+                 <!-- Grid row -->
+                 <div class="row ">
+                   <!-- Grid column -->
+                   <div class="col mt-2">
+                     <!-- Default input -->
+                     <input type="text" class="form-control" id="from" placeholder="from" name="from" readonly required>
+                   </div>
+                   <!-- Grid column -->
 
-<h4 style="margin-left:300px; margin-top: 100px;">
-    Booked Appointments are:
-</h4>
-<div style="margin-left:300px">
-    <form action="" method="get">
-        Filter By: <input type="text" id= "from" name="from" placeholder="From" autocomplete="off" maxlength="10">
-       
-        <input type="text" name="to" placeholder="To" id="to" autocomplete="off" maxlength="10">
-    <script type="text/javascript">
-        
-        <script>
-            $(function () {
-                $("#to").datepicker();
-            });
-        </script>
-          
+                   <!-- Grid column -->
+                   <div class="col mt-2">
+                     <!-- Default input -->
+                     <input type="text" class="form-control" id="to" placeholder="to" name="to" readonly required>
+                   </div>
+                   <div class="col">
+                        <button type="submit" name="get" class="btn btn-primary"><span>Search <img src="images/search.png" title="" alt="" height="17" width="17" /></span></button>
+                   </div>
+                   <!-- Grid column -->
+                 </div>
+                 <!-- Grid row -->
+               </form>
+               <!-- Default form grid -->
+            </div>
+         
+     </div>
 
 
-        <button type="submit" name="get"><span>Search <img src="images/search.png" title="" alt="" height="17" width="17" /></span></button> <br><br><br>
-    </form>
+ <div class="container ml-auto mr-auto">
+      
+          <div class="alert alert-warning alert-dismissable text-center" role="alert">
+            <button class="close" data-dismiss="alert">
+              <small><sup>x</sup></small>
+            </button>
+            The record shows the latest 5 ordered by date away, but you can filter any period.
+          </div>
+    
+
 </div>
   <div>
         <!--<h1 style="margin-left:500px; margin-top: 100px">Counsellors List</h1>-->
@@ -187,9 +203,40 @@ body {
         </table>
      </div>
       </div>
-        <div class="footer fixed-bottom">
-       <jsp:include page="../includes/footer.jsp"/>
+       <div class="footer fixed-bottom" style="color: #ffffff; background-color: #808080">
+     <%@ page import="java.util.*" %>
+
+<footer class="text-center footer-copyright py-3 navbar-dark white-text" style="background-color: #808080">
+    <% GregorianCalendar currentDate = new GregorianCalendar();
+    int year = currentDate.get(Calendar.YEAR);
+    %>
+        &copy;Copyright <%= year %> <i>CodeBloode Sons Systems. </i>&checkmark;
+</footer>
+
+ <script type="text/javascript" src="cdn/jquery-3.4.0.min.js"></script>
+ <script type="text/javascript" src="cdn/jquery-ui.js"></script>
+ <script type="text/javascript" src="cdn/popper.min.js"></script>
+  <script type="text/javascript" src="cdn/mdb.min.js"></script>
+ <script type="text/javascript" src="cdn/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="cdn/jszip.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/pdfmake.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/vfs_fonts.js">
+
+
+       
     </div>
-       <!--<p>dean/DeleteCounsellor.jsp?id={t.counsNo}</p>-->
-</body>
+       
+                 <script>
+                    $(function() {
+                       $( "#from" ).datepicker({dateFormat: 'yy-mm-dd'});
+
+                     });
+                </script>
+                 <script>
+                    $(function() {
+                       $( "#to" ).datepicker({dateFormat: 'yy-mm-dd'});
+
+                     });
+                </script>
+        </body>
 </HTML>
