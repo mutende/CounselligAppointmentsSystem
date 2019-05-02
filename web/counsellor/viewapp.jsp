@@ -33,20 +33,48 @@
     <body>
         <jsp:include page="../includes/counsnav.html"/>
      
-
-<div class="container" style="margin-top: 150px "> 
-    <h4 >
-        Enter the Date to View the Booked Sessions
-    </h4>
+        <br><br>
+        <div class="row mt-5"> 
+            <div class="col-md-12">
+                <h4 class="text-center" >
+                  Pick date to view your appointments
+                </h4>
+            </div>
+        
+        </div>
+    
     <br>
+    <div class="row">
+   
+     <div class="container col-md-10 offset-3">
+                            <!-- Default form grid -->
+             <form id="form" action="Search" method="post">
+                 <!-- Grid row -->
+                 <div class="row ">
+                   <!-- Grid column -->
+                   <div class="col mt-2 col-md-3 offset-1">
+                     <!-- Default input -->
+                     <input type="text" id= "date" class="form-control" name="dater" placeholder="Date" readonly required>
+                   </div>
+                   <!-- Grid column -->
+                   <div class="col">
+                        <button type="submit" name="get" class="btn btn-primary"><span>Search <img src="images/search.png" title="" alt="" height="17" width="17" /></span></button>
+                   </div>
+                   <!-- Grid column -->
+                 </div>
+                 <!-- Grid row -->
+               </form>
+               <!-- Default form grid -->
+            </div>
            
-       <form id="form" action="Search" method="post">
-            <input type="text" id= "date" class="btn btn-outline-info btn-sm" name="dater" placeholder="Date" readonly="readonly" required autocomplete="off">
+<!--       <form id="form" action="Search" method="post">
+            <input type="text" id= "date" class="form-control" name="dater" placeholder="Date" readonly="readonly" required autocomplete="off">
          
-            <button type="submit" class="btn btn-outline-success btn-sm" name="date_away"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button>
+            <button type="submit" class="btn btn-primary" name="date_away"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button>
 
-        </form>
+        </form>-->
     </div>
+         
        
     
                <script>

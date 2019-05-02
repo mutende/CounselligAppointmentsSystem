@@ -51,7 +51,7 @@ public class AddDate extends HttpServlet {
                 java.util.Date after = tmformat.parse("16:15:00");
                 if(time.after(after) || time.before(before)){
                     
-                    messages= "!!!Error Pick time between 8:30:00 and 16:15:00 !!!";
+                    messages= "!!!Error Pick time between 8:30:00 and 16:15:00 !!! ";
                     request.setAttribute("messages", messages);
                     response.sendRedirect("AddDate?time error");
                     
