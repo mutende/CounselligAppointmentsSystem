@@ -37,7 +37,7 @@
         <div class="row mt-5"> 
             <div class="col-md-12">
                 <h4 class="text-center" >
-                  Pick date to view your appointments
+                  Pick date to view  appointment sessions
                 </h4>
             </div>
         
